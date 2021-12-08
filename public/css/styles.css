@@ -64,6 +64,7 @@ button:hover {
 
 img {
   width: 100%;
+  max-width: 650px;
 }
 
 header,
@@ -94,9 +95,10 @@ form {
 }
 
 form > input {
-  flex: 1;
+  width: 100%;
   margin-right: 0.5em;
   border: 1px solid gray;
+  max-width: 650px;
 }
 
 form > input,
@@ -107,7 +109,8 @@ form > button {
 }
 
 .weather-info {
-  margin: 1em;
+  margin: 1em 0;
+  max-width: 650px;
 }
 
 .location {
@@ -143,8 +146,30 @@ footer {
   color: white;
 }
 
+.about-page-text {
+  font-size: 1.25rem;
+  color: var(--cyan-clr);
+  margin-block: 0.25em 0.75em;
+  max-width: 650px;
+}
+
 .help-page > header,
 .help-page > footer {
   background-color: var(--orange-clr);
   color: white;
+}
+
+@media (min-width: 650px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header > ul {
+    flex: 0.5;
+  }
+
+  footer {
+    text-align: left;
+  }
 }

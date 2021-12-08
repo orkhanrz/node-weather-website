@@ -11,7 +11,9 @@ const weather = (lat, lon, callback) => {
     } else {
       callback(
         undefined,
-        `${body.weather[0].main}. It is currently ${body.main.temp} degrees out. It feels like ${body.main.feels_like} degrees out.`
+        `${body.weather[0].main}. It is currently ${body.main.temp} degrees out. 
+        It feels like ${body.main.feels_like} degrees out.
+        Humidity is ${body.main.humidity}% and wind speed is ${body.wind.speed}km/h.`
       );
     }
   });
